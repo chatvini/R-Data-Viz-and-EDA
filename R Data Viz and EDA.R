@@ -137,7 +137,7 @@ cor(mmix[,c(1,2,3,4,5,7,8,9)])
 
 #corplot library to get correlation plot
 
-## you can change the type (method) to kendall, spearman or pearson (default)
+##we can change the type (method) to kendall, spearman or pearson (default)
 
 #Viz for continuous variables
 qplot(mmix$BasePrice, mmix$NewVolSales)
@@ -244,8 +244,7 @@ cor(mmix$NewVolSales, mmix$Radio_lag, use = 'complete.obs')
 
 
 
-## Let's continue and finish rest of the topics
-
+## Additional
 # Find relationship b/w categorical variables using frequency/ counts 
 # What is your interpretation here?
 table(mmix$PromoType, mmix$Qtr)
@@ -271,7 +270,7 @@ barplot(prop.table(a,2),
         font.lab=2)
 
 
-# Check this out
+# More
 # https://www.r-graph-gallery.com/index.html
 
 # Use ggplot library to plot stacked bar 
@@ -435,7 +434,7 @@ qplot(mmix$Radio, mmix$NewVolSales)
 #Today's spend on a radio promotion might lead to sales n days down the line
 cor(mmix$NewVolSales,lag(mmix$Radio,7), use = "complete.obs")
 
-#what happens if I see correlation b/w log transformed sales and lag radio
+#what happens if we see correlation b/w log transformed sales and lag radio
 
 #Create a lag variable in data
 mmix$Radio_lag <- lag(mmix$Radio, 7)
